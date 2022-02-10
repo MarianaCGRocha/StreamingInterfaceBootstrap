@@ -1,0 +1,105 @@
+:root {
+    --vermelho:#E50914; /*Declaração de cores como variáveis, assim você não precisa pegar a cor toda vez pelo código hex*/
+    --preta: #141414;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*Determina que o tamanho máximo da caixa será a borda determinada para que elementos maiores não ultrapassem a caixa do body*/
+}
+
+/*ELEMENTOS BASE*/
+
+body {
+    background: var(--preta);
+    font-family: 'Arial', Times, serif;
+    color: white;
+}
+
+header .container {
+    display: flex;/*Faz com que usemos uma flex box, alinhamento de elementos em tela*/
+    flex-direction: row; /*Alinha os itens da flex box na primeira linha*/
+    align-items: center;/*alinha os itens ao centro da caixa*/
+    justify-content: space-between;/*Justifica o conteúdo de alguma forma*/
+}
+
+header .logo {
+    color: var(--vermelho);
+    font-family: "Arial Black", Times; /*Você pode usar várias fontes primárias sem que sejam as sugeridas*/
+    font-size: 40px;
+    margin-left: 5px;
+}
+
+header nav a {
+    text-decoration: none;/*Retira o underline dos links*/
+    color: #AAA;
+    margin-right: 10px;
+}
+
+header nav a:hover {
+    color:#fff;/*Faz com que os links sejam destacados na cor sugerida quando passamos o mouse em cima*/
+}
+
+/*Filme Principal*/
+.filme-principal {
+    font-size: 16px; /*Abaixo o linear-gradient faz uma camada gradiente de preto com 50% de transparência para que possamos acrescentar texto sobre a imagem sem perder leitura e qualidade*/
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50) 100%), url('../img/doctor-capa.jpg');
+    height: 400px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .descricao {
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+
+.filme-principal .titulo {
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.filme-principal .botao {
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: white;
+
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+
+    cursor: pointer;/*Muda o cursor quando passa em algum link ou botão para uma mãozinha - UX*/
+    transition: all 1s ease !important;
+}
+
+.botao:hover {
+    background-color: white;
+    color: black;
+}
+
+.botao i {
+    margin-right: 8px;
+}
+
+.container {
+    margin-left: 20px;
+}
+
+.filme-principal .container {
+    width: 70%;
+}
+
+.box-filme {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrossel-filmes {
+    margin-top: 5px;
+}
